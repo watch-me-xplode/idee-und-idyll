@@ -1,4 +1,78 @@
 @import "../shared/scss/general/general";
+#logo-mobile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 80%;
+    z-index: 1;
+    @media screen and (min-width: $tablet-min) {
+        display: none;
+    }
+}
+
+#logo-tablet {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 400px;
+    position: relative;
+    width: 50%;
+    z-index: 1;
+    @media screen and (min-width: $tablet-min) {
+        display: block;
+    }
+    @media screen and (min-width: $desktop-min) {
+        display: none;
+    }
+}
+
 #link-container {
-    @include flexbox-container();
+    @include flexbox-container(row, wrap, space-around);
+    position: relative;
+    z-index: 1;
+    p {
+        @include font-size-greater();
+        @include radial-gradient(white, rgba(0, 0, 0, 0));
+        @include flexbox-item();
+        border-radius: 10px;
+        box-sizing: border-box;
+        color: $color-main;
+        cursor: pointer;
+        font-family: $font-family-handwriting;
+        margin: 0;
+        padding: 0.5rem 2rem;
+        text-align: center;
+        width: 50%;
+        @media screen and (min-width: $tablet-min) {
+            width: 33%;
+        }
+        @media screen and (min-width: $desktop-min) {
+            width: auto;
+        }
+    }
+    #logo-desktop {
+        @include flexbox-item();
+        display: none;
+        max-width: 300px;
+        @media screen and (min-width: $desktop-min) {
+            display: inline;
+        }
+    }
+}
+
+#branches-container {
+    opacity: 0.3;
+    #branches-desktop {
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 400px;
+        @media screen and (min-width: $tablet-min) {
+            width: 500px;
+        }
+        @media screen and (min-width: $desktop-min) {
+            width: 700px;
+        }
+    }
 }

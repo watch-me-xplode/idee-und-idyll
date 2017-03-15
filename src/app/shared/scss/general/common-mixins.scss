@@ -4,3 +4,19 @@
     -ms-border-radius: $radius;
     border-radius: $radius;
 }
+
+@mixin radial-gradient($color1, $color2) {
+    background: $color1; //For browsers that do not support gradients
+    background: -webkit-radial-gradient($color1 40%, $color2 75%); //Safari 5.1 to 6.0
+    background: -o-radial-gradient($color1 40%, $color2 75%); //For Opera 11.6 to 12.0
+    background: -moz-radial-gradient($color1 40%, $color2 75%); //For Firefox 3.6 to 15
+    background: radial-gradient($color1 40%, $color2 75%); //Standard syntax
+}
+
+@mixin font-size-normal() {
+    font-size: 1.1rem;
+}
+
+@mixin font-size-greater() {
+    font-size: 1.5rem;
+}
