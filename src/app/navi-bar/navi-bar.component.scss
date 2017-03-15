@@ -1,0 +1,4 @@
+@import "../shared/scss/general/general";
+#link-container {
+    @include flexbox-container();
+}
