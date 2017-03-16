@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { NaviBarComponent } from './navi-bar/navi-bar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HomeComponent } from './home/home.component';
+import { PhilosophieComponent } from './philosophie/philosophie.component';
+import { BildergalerieComponent } from './bildergalerie/bildergalerie.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NaviBarComponent,
     LandingPageComponent,
-    HomeComponent
+    HomeComponent,
+    PhilosophieComponent,
+    BildergalerieComponent
   ],
   imports: [
     BrowserModule,

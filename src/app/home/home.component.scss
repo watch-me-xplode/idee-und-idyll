@@ -1,3 +1,4 @@
+@import "../shared/scss/general/general";
 #profilpic {
     display: block;
     margin-left: auto;
@@ -5,4 +6,12 @@
     max-width: 400px;
     padding-top: 2rem;
     width: 90%;
+}
+
+#offer-container {
+    p {
+        @include font-size-greater;
+        font-family: $font-family-handwriting;
+        text-align: center;
+    }
 }

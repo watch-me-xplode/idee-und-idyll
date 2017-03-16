@@ -31,7 +31,7 @@
     @include flexbox-container(row, wrap, space-around);
     position: relative;
     z-index: 1;
-    p {
+    a {
         @include font-size-greater();
         @include radial-gradient(white, rgba(0, 0, 0, 0));
         @include flexbox-item();

@@ -1,0 +1,8 @@
+@import "../shared/scss/general/general";
+#text-container {
+    p {
+        @include font-size-greater;
+        font-family: $font-family-handwriting2;
+        text-align: center;
+    }
+}
