@@ -10,14 +10,13 @@ export class BildergalerieStorage {
     private locations: LocationBildergalerie[] = [];
 
     constructor() {
-        //Unterwattenbach
-        let unterwattenbachImages: ImageBildergalerie[] = [];
-        unterwattenbachImages.push(
-            new ImageBildergalerie("").setYear(2010),
-            new ImageBildergalerie("").setYear(2011)
+        //Berglern
+        let berglernImages: ImageBildergalerie[] = [];
+        berglernImages.push(
+            new ImageBildergalerie("Ruhebringendes Grün").setYear(2010),
         );
-        let unterwattenbach: LocationBildergalerie = new LocationBildergalerie().setLocation("Unterwattenbach").setImages(unterwattenbachImages);
-        this.locations.push(unterwattenbach);
+        let berglern: LocationBildergalerie = new LocationBildergalerie().setLocation("Berglern").setImageName("test3").setImages(berglernImages);
+        this.locations.push(berglern);
         
 
         //Mettenbach
@@ -26,8 +25,18 @@ export class BildergalerieStorage {
             new ImageBildergalerie("").setYear(2010),
             new ImageBildergalerie("").setYear(2011)
         );
-        let mettenbach: LocationBildergalerie = new LocationBildergalerie().setLocation("Mettenbach").setImages(mettenbachImages);
+        let mettenbach: LocationBildergalerie = new LocationBildergalerie().setLocation("Mettenbach").setImageName("test2").setImages(mettenbachImages);
         this.locations.push(mettenbach);
+
+
+        //Unterwattenbach
+        let unterwattenbachImages: ImageBildergalerie[] = [];
+        unterwattenbachImages.push(
+            new ImageBildergalerie("Rosenbogen_mit_Blick_auf_Teichanlage").setYear(2006),
+            new ImageBildergalerie("Teichidyll").setYear(2010)
+        );
+        let unterwattenbach: LocationBildergalerie = new LocationBildergalerie().setLocation("Unterwattenbach").setImageName("test").setImages(unterwattenbachImages);
+        this.locations.push(unterwattenbach);
     }
 
     public getLocations(): LocationBildergalerie[] {

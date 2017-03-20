@@ -6,6 +6,7 @@
         margin-right: auto;
         max-width: $desktop-min;
         #router-outlet {
+            padding-top: 2rem;
             position: relative;
             z-index: 1;
         }

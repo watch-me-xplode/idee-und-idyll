@@ -2,6 +2,7 @@ import { ImageBildergalerie } from "./image-bildergalerie.model";
 
 export class LocationBildergalerie {
     private location: string;
+    private imageName: string;
     private allImages: ImageBildergalerie[] = [];
     private visibleImagesAmount: number;
 
@@ -10,10 +11,12 @@ export class LocationBildergalerie {
     }
 
     public getLocation(): string { return this.location; }
+    public getImageName(): string { return this.imageName; }
     public getImages(): ImageBildergalerie[] { return this.allImages; }
     public getVisibleImagesAmount(): number { return this.visibleImagesAmount; }
 
     public setLocation(location: string): LocationBildergalerie { this.location = location; return this; }
+    public setImageName(name: string): LocationBildergalerie { this.imageName = name; return this; }
     public setImages(images: ImageBildergalerie[]): LocationBildergalerie { this.allImages = images; return this; }
     public hideImages(): void { this.visibleImagesAmount = 0; }
     public showImages(): void {

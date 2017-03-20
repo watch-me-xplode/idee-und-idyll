@@ -1,12 +1,18 @@
 <!-- Locations -->
 <div *ngFor="let location of locations">
-    <div class="location-headline" (click)="location.showImages()">
+    <div id="{{location.getImageName()}}" class="location-headline" (click)="location.showImages()">
         <p>{{location.getLocation()}}</p>
     </div>
     <!-- Images -->
     <div *ngFor=" let image of location.getImages(); let index=index" class="galerie-image" [ngClass]="{ 'image-hidden': index >= location.getVisibleImagesAmount(), 'image-visible': index < location.getVisibleImagesAmount()}">
         <div [ngClass]="{ 'image-not-displayed': index >= location.getVisibleImagesAmount(), 'image-displayed': index < location.getVisibleImagesAmount()}">
+            <img src="{{'../assets/pics/bildergalerie/' + image.getLabel() + '.jpg'}}" alt="{{image.getLabel()}}">
             <p class="image">{{image.getYear()}}</p>
         </div>
     </div>
+    <!-- Buttons -->
+    <p>Die nächsten Bilder anzeigen</p>
+    <p>Alle Bilder anzeigen</p>
+    <p>Bilder anzeigen, wie der Garten vor meiner Umgestaltung aussah</p>
+    <!-- Deprecated -->
 </div>
