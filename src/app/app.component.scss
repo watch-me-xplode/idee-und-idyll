@@ -1,7 +1,13 @@
+@import "./shared/scss/general/general";
 #wrapper {
     background: url(../assets/pics/background.png);
-    #router-outlet {
-        position: relative;
-        z-index: 1;
+    #maxwidth-container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: $desktop-min;
+        #router-outlet {
+            position: relative;
+            z-index: 1;
+        }
     }
 }

@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
+import { BildergalerieStorage } from './shared/services/bildergalerie-storage.service';
+
 import { AppComponent } from './app.component';
 import { NaviBarComponent } from './navi-bar/navi-bar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
@@ -26,7 +28,9 @@ import { BildergalerieComponent } from './bildergalerie/bildergalerie.component'
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    BildergalerieStorage
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

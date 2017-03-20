@@ -1,28 +1,12 @@
-<!-- Swiper -->
-<div class="swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide" id="swiper-slide1">
-            <p><b>Praxis für Naturheilverfahren und energetisches Heilen</b></p>
-        </div>
-        <div class="swiper-slide" id="swiper-slide2">
-            <b>Naturheilpraxis Daniela Hale</b>
-        </div>
-        <div class="swiper-slide" id="swiper-slide3">
-
-        </div>
-        <div class="swiper-slide" id="swiper-slide4">
-            <b>Psychosomatische Energetik</b>
-        </div>
-        <div class="swiper-slide" id="swiper-slide5">
-
-        </div>
-        <div class="swiper-slide" id="swiper-slide6">
-            <p><b>Persönlichkeitstraining</b></p>
-        </div>
-        <div class="swiper-slide" id="swiper-slide7">
-            <p><b>Gesprächspsychotherapie</b></p>
+<!-- Locations -->
+<div *ngFor="let location of locations">
+    <div class="location-headline" (click)="location.showImages()">
+        <p>{{location.getLocation()}}</p>
+    </div>
+    <!-- Images -->
+    <div *ngFor=" let image of location.getImages(); let index=index" class="galerie-image" [ngClass]="{ 'image-hidden': index >= location.getVisibleImagesAmount(), 'image-visible': index < location.getVisibleImagesAmount()}">
+        <div [ngClass]="{ 'image-not-displayed': index >= location.getVisibleImagesAmount(), 'image-displayed': index < location.getVisibleImagesAmount()}">
+            <p class="image">{{image.getYear()}}</p>
         </div>
     </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
 </div>

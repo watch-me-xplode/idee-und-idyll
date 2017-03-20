@@ -1,0 +1,16 @@
+﻿<div id="wrapper" [style.width]="width">
+    <div id="main-container" (click)="toggleDropdown(); dropdownAction();">
+        <p>
+            {{enabledOptions[currentlySelected]}}
+            <img src="./assets/font-awesome-svg/white/chevron-circle-down.svg" alt="chevron-circle-down.svg" [ngClass]="{'rotateDown': open && !reverse, 'rotateUp': open && reverse}" />
+        </p>
+    </div>
+    <div id="options-container" [ngClass]="{'reversed': reverse, 'hideOptionsContainer': visibleIndex < 2}">
+        <div class="enabled" *ngFor="let option of enabledOptions; let i = index">
+            <p [ngClass]="{'hidden': isHidden(i, 0), 'selected': i === currentlySelected}" class="enabledOptions" (click)="selectionChanged.emit(i); toggleDropdown(); dropdownAction();">{{option}}</p>
+        </div>
+        <div class="disabled" *ngFor="let option of disabledOptions; let i = index">
+            <p [ngClass]="{'hidden': isHidden(i, enabledOptions.length)}" class="disabledOptions">{{option}}</p>
+        </div>
+    </div>
+</div>
