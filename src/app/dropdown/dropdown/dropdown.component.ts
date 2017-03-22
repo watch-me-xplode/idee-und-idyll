@@ -21,7 +21,7 @@ export class DropdownComponent/*<T extends Category>*/ {
 
     private open: boolean = false;
     private visibleIndex: number = 0;
-    private addOptionTimeout: number;
+    private addOptionTimeout: any;
     private initialized: boolean = false;
     private optionAmount: number;
 

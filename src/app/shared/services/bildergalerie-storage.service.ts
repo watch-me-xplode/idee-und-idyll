@@ -13,7 +13,7 @@ export class BildergalerieStorage {
         //Berglern
         let berglernImages: ImageBildergalerie[] = [];
         berglernImages.push(
-            new ImageBildergalerie("Ruhebringendes Grün").setYear(2010),
+            new ImageBildergalerie("Ruhebringendes_Grün").setYear(2010),
         );
         let berglern: LocationBildergalerie = new LocationBildergalerie().setLocation("Berglern").setImageName("test3").setImages(berglernImages);
         this.locations.push(berglern);

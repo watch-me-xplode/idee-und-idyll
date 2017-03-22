@@ -1,68 +1,102 @@
 @import "../shared/scss/general/general";
-.location-headline {
-    border-radius: 20px;
-    cursor: pointer;
-    height: 237px;
+.location-container {
     margin: 3rem auto 1rem;
     width: 95%;
-    p {
-        @include drop-shadow(0 0 5px #000);
-        @include font-size-huge();
-        color: white;
-        font-family: $font-family-handwriting;
-        line-height: 237px;
+    .location-headline {
+        border-radius: 20px;
+        cursor: pointer;
         height: 237px;
-        margin: 0;
-        text-align: center;
-    }
-}
-
-#test {
-    background: url(../assets/pics/location-background/test.png);
-}
-
-#test2 {
-    background: url(../assets/pics/location-background/test2.png);
-}
-
-#test3 {
-    background: url(../assets/pics/location-background/test3.png);
-}
-
-.galerie-image {
-    @include transition(opacity 2s);
-    .image-not-displayed {
-        display: none;
-    }
-    .image-displayed {
-        display: block;
-    }
-    div {
+        margin-bottom: 0.5rem;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
         img {
             display: block;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 90%;
         }
-        p {
-            box-sizing: border-box;
-            color: $color-main;
-            font-family: $font-family-handwriting2;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 2px;
-            max-width: 90%;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            text-align: right;
+        #name {
+            @include drop-shadow(0 0 5px #000);
+            @include font-size-huge();
+            color: white;
+            font-family: $font-family-handwriting;
+            margin: 0;
+            position: absolute;
+            text-align: center;
+            top: calc(115px - 3rem);
+            width: 100%;
+        }
+        #infotext {
+            @include drop-shadow(0 0 3px #000);
+            @include font-size-normal();
+            color: white;
+            font-family: $font-family-handwriting;
+            margin: 0;
+            position: absolute;
+            text-align: center;
+            bottom: 1rem;
+            width: 100%;
         }
     }
-}
 
-.image-hidden {
-    opacity: 0;
-}
+    .images-container {
+        .galerie-image {
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 90%;
+            }
+            p {
+                box-sizing: border-box;
+                color: $color-main;
+                font-family: $font-family-handwriting2;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 2px;
+                max-width: 90%;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                text-align: right;
+            }
+        }
 
-.image-visible {
-    opacity: 1;
+        .images-button {
+            @include font-size-normal();
+            @include radial-gradient(white, rgba(0, 0, 0, 0));
+            border-radius: 10px;
+            box-sizing: border-box;
+            color: $color-main;
+            cursor: pointer;
+            font-family: $font-family-handwriting2;
+            margin: 0;
+            padding: 0.5rem 2rem;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    .deprecated-container {
+        .deprecated-button {
+            @include font-size-normal();
+            @include radial-gradient(white, rgba(0, 0, 0, 0));
+            border-radius: 10px;
+            box-sizing: border-box;
+            color: $color-main;
+            cursor: pointer;
+            font-family: $font-family-handwriting2;
+            margin: 0;
+            padding: 0.5rem 2rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        .deprecated-image {
+            img {
+                @include filter(sepia(50%));
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 90%;
+            }
+        }
+    }
 }

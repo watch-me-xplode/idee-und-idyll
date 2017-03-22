@@ -40,3 +40,9 @@
     -webkit-filter: drop-shadow($value); //Safari 6.0 - 9.0
     filter: drop-shadow($value);
 }
+
+@mixin filter($value) {
+    //value like: sepia(100%)
+    -webkit-filter: $value; // Safari
+    filter: $value;
+}
