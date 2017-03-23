@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-navi-bar',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navi-bar.component.scss']
 })
 export class NaviBarComponent implements OnInit {
+  @Output() toLandingPage = new EventEmitter();
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  private gotoLandingPage():void {
+    this.router.navigate(['/']);
+    this.toLandingPage.emit();
+  }
 }

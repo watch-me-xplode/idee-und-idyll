@@ -1,6 +1,9 @@
 <div id="wrapper">
-    <div id="maxwidth-container">
-        <app-navi-bar></app-navi-bar>
+    <div *ngIf="landingPage" id="landing-page-container">
+        <app-landing-page (toLandingPage)="toggleLandingPage()"></app-landing-page>
+    </div>
+    <div [ngClass]="{'hide-maxwidth-container': landingPage}" id="maxwidth-container">
+        <app-navi-bar (toLandingPage)="toggleLandingPage()"></app-navi-bar>
         <div id="router-outlet">
             <router-outlet></router-outlet>
         </div>

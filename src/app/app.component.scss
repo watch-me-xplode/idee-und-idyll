@@ -1,6 +1,7 @@
 @import "./shared/scss/general/general";
 #wrapper {
     background: url(../assets/pics/background.png);
+    min-height: 100vh;
     #maxwidth-container {
         margin-left: auto;
         margin-right: auto;
@@ -10,5 +11,12 @@
             position: relative;
             z-index: 1;
         }
+    }
+
+    .hide-maxwidth-container {
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        visibility: hidden;
     }
 }

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { LandingPageComponent } from "./landing-page/landing-page.component";
 import { HomeComponent } from "./home/home.component";
 import { PhilosophieComponent } from "./philosophie/philosophie.component";
 import { BildergalerieComponent } from "./bildergalerie/bildergalerie.component";
@@ -9,7 +8,7 @@ import { BildergalerieComponent } from "./bildergalerie/bildergalerie.component"
 const routes: Routes = [
   {
     path: '',
-    component: LandingPageComponent,
+    component: HomeComponent,
     children: []
   },
   {
@@ -29,7 +28,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    component: LandingPageComponent,
+    component: HomeComponent,
     children: []
   }
 ];
