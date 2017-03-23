@@ -12,6 +12,10 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HomeComponent } from './home/home.component';
 import { PhilosophieComponent } from './philosophie/philosophie.component';
 import { BildergalerieComponent } from './bildergalerie/bildergalerie.component';
+import { LinksComponent } from './links/links.component';
+import { KontaktComponent } from './kontakt/kontakt.component';
+import { GuestbookComponent } from './guestbook/guestbook.component';
+import { ImpressumComponent } from './impressum/impressum.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { BildergalerieComponent } from './bildergalerie/bildergalerie.component'
     LandingPageComponent,
     HomeComponent,
     PhilosophieComponent,
-    BildergalerieComponent
+    BildergalerieComponent,
+    LinksComponent,
+    KontaktComponent,
+    GuestbookComponent,
+    ImpressumComponent
   ],
   imports: [
     BrowserModule,

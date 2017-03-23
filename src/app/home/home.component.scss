@@ -11,7 +11,8 @@
 #offer-container {
     p {
         @include font-size-greater;
-        font-family: $font-family-handwriting;
+        color: $color-main;
+        font-family: $font-family-handwriting2;
         text-align: center;
     }
 }

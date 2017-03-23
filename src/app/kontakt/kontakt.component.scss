@@ -1,0 +1,29 @@
+@import "../shared/scss/general/general";
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: $mobile-max;
+    @media screen and (min-width: $tablet-med) {
+        width: $tablet-med;
+    }
+    @media screen and (min-width: $desktop-min) {
+        width: $desktop-min;
+    }
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        &:nth-child(2) {
+            display: none;
+        }
+        @media screen and (min-width: $desktop-min) {
+            &:nth-child(1) {
+                display: none;
+            }
+            &:nth-child(2) {
+                display: block;
+            }
+        }
+    }
+}

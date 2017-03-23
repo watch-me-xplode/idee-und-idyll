@@ -4,6 +4,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from "./home/home.component";
 import { PhilosophieComponent } from "./philosophie/philosophie.component";
 import { BildergalerieComponent } from "./bildergalerie/bildergalerie.component";
+import { LinksComponent } from "./links/links.component";
+import { KontaktComponent } from "./kontakt/kontakt.component";
+import { GuestbookComponent } from "./guestbook/guestbook.component";
+import { ImpressumComponent } from "./impressum/impressum.component";
 
 const routes: Routes = [
   {
@@ -24,6 +28,26 @@ const routes: Routes = [
   {
     path: 'galerie',
     component: BildergalerieComponent,
+    children: []
+  },
+  {
+    path: 'links',
+    component: LinksComponent,
+    children: []
+  },
+  {
+    path: 'kontakt',
+    component: KontaktComponent,
+    children: []
+  },
+  {
+    path: 'guestbook',
+    component: GuestbookComponent,
+    children: []
+  },
+  {
+    path: 'impressum',
+    component: ImpressumComponent,
     children: []
   },
   {

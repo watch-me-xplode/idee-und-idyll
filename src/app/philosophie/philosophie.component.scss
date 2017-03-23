@@ -2,6 +2,7 @@
 #text-container {
     p {
         @include font-size-greater;
+        color: $color-main;
         font-family: $font-family-handwriting2;
         text-align: center;
     }
