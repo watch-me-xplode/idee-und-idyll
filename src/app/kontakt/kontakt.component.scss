@@ -1,8 +1,12 @@
 @import "../shared/scss/general/general";
 #wrapper {
+    position: relative;
     margin-left: auto;
     margin-right: auto;
-    width: $mobile-max;
+    width: 300px;
+    @media screen and (min-width: $mobile-max) {
+        width: $mobile-max;
+    }
     @media screen and (min-width: $tablet-med) {
         width: $tablet-med;
     }
@@ -13,7 +17,7 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 90%;
+        width: 100%;
         &:nth-child(2) {
             display: none;
         }
@@ -24,6 +28,39 @@
             &:nth-child(2) {
                 display: block;
             }
+        }
+    }
+    a {
+        @include font-size-normal;
+        color: $color-main;
+        display: block;
+        font-family: $font-family-handwriting2;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+    }
+    #phone {
+        top: 5rem;
+        @media screen and (min-width: $mobile-max) {
+            top: 9rem;
+        }
+        @media screen and (min-width: $tablet-med) {
+            top: 16rem;
+        }
+        @media screen and (min-width: $desktop-min) {
+            top: 19rem;
+        }
+    }
+    #email {
+        top: 8rem;
+        @media screen and (min-width: $mobile-max) {
+            top: 13rem;
+        }
+        @media screen and (min-width: $tablet-med) {
+            top: 21rem;
+        }
+        @media screen and (min-width: $desktop-min) {
+            top: 24rem;
         }
     }
 }
