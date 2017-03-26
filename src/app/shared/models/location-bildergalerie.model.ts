@@ -2,6 +2,7 @@ import { ImageBildergalerie } from "./image-bildergalerie.model";
 
 export class LocationBildergalerie {
     private location: string;
+    private sublocation: string;
     private locationUrl: string;
     private backgroundimageName: string;
     private images: ImageBildergalerie[] = [];
@@ -15,12 +16,14 @@ export class LocationBildergalerie {
     }
 
     public getLocation(): string { return this.location; }
+    public getSublocation(): string { return this.sublocation; }
     public getLocationUrl(): string { return this.locationUrl; }
     public getImageName(): string { return this.backgroundimageName; }
     public getImages(): ImageBildergalerie[] { return this.images.slice(0, this.visibleImagesAmount); }
     public getDeprecatedImages(): ImageBildergalerie[] { return this.deprecatedImages.slice(0, this.visibleDeprecatedImagesAmount); }
 
     public setLocation(location: string): LocationBildergalerie { this.location = location; return this; }
+    public setSublocation(sublocation: string): LocationBildergalerie { this.sublocation = sublocation; return this; }
     public setLocationUrl(location: string): LocationBildergalerie { this.locationUrl = location; return this; }
     public setImageName(name: string): LocationBildergalerie { this.backgroundimageName = name; return this; }
     public setImages(images: ImageBildergalerie[]): LocationBildergalerie {
