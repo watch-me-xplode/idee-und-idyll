@@ -38,6 +38,9 @@
         position: absolute;
         text-align: center;
         width: 100%;
+        @media screen and (min-width: $mobile-max) {
+            @include font-size-greatest;
+        }
     }
     #phone {
         top: 5rem;
@@ -48,7 +51,7 @@
             top: 16rem;
         }
         @media screen and (min-width: $desktop-min) {
-            top: 19rem;
+            top: 18rem;
         }
     }
     #email {
@@ -60,7 +63,7 @@
             top: 21rem;
         }
         @media screen and (min-width: $desktop-min) {
-            top: 24rem;
+            top: 23rem;
         }
     }
 }

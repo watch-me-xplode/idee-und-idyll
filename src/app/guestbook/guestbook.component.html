@@ -1,3 +1,6 @@
-<p>
-  guestbook works!
-</p>
+<div id="wrapper">
+  <div class="content-container" *ngFor="let entry of entries">
+    <p class="content">{{entry.getContent()}}</p>
+    <p class="info"><b>{{entry.getAuthor() + ', ' + entry.getLocation()}}</b></p>
+  </div>
+</div>

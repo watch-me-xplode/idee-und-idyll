@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { BildergalerieStorage } from './shared/services/bildergalerie-storage.service';
+import { GbStorage } from './shared/services/gb-storage.service';
 
 import { AppComponent } from './app.component';
 import { NaviBarComponent } from './navi-bar/navi-bar.component';
@@ -37,7 +38,8 @@ import { ImpressumComponent } from './impressum/impressum.component';
     AppRoutingModule
   ],
   providers: [
-    BildergalerieStorage
+    BildergalerieStorage,
+    GbStorage
   ],
   bootstrap: [AppComponent]
 })
