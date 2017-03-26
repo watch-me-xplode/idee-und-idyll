@@ -2,6 +2,7 @@ import { ImageBildergalerie } from "./image-bildergalerie.model";
 
 export class LocationBildergalerie {
     private location: string;
+    private locationUrl: string;
     private backgroundimageName: string;
     private images: ImageBildergalerie[] = [];
     private deprecatedImages: ImageBildergalerie[] = [];
@@ -14,15 +15,25 @@ export class LocationBildergalerie {
     }
 
     public getLocation(): string { return this.location; }
+    public getLocationUrl(): string { return this.locationUrl; }
     public getImageName(): string { return this.backgroundimageName; }
     public getImages(): ImageBildergalerie[] { return this.images.slice(0, this.visibleImagesAmount); }
     public getDeprecatedImages(): ImageBildergalerie[] { return this.deprecatedImages.slice(0, this.visibleDeprecatedImagesAmount); }
 
     public setLocation(location: string): LocationBildergalerie { this.location = location; return this; }
+    public setLocationUrl(location: string): LocationBildergalerie { this.locationUrl = location; return this; }
     public setImageName(name: string): LocationBildergalerie { this.backgroundimageName = name; return this; }
-    public setImages(images: ImageBildergalerie[]): LocationBildergalerie { this.images = images; return this; }
+    public setImages(images: ImageBildergalerie[]): LocationBildergalerie {
+        images.forEach(image => {
+            if (image.isDeprecated()) {
+                this.deprecatedImages.push(image);
+            } else {
+                this.images.push(image);
+            }
+        });
+        return this;
+    }
     public getHiddenImagesAmount(): number { return this.images.length - this.visibleImagesAmount; }
-    public setDeprecatedImages(images: ImageBildergalerie[]): LocationBildergalerie { this.deprecatedImages = images; return this; }
     public toggleImages(): void {
         if (this.visibleImagesAmount === 0) {
             this.visibleImagesAmount += 1; 

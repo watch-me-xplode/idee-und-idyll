@@ -8,18 +8,19 @@
     <!-- Images -->
     <div class="images-container">
         <div *ngFor=" let image of location.getImages()" class="galerie-image">
-            <img src="{{'../assets/pics/bildergalerie/' + image.getLabel() + '.jpg'}}" alt="{{image.getLabel()}}">
-            <p class="image">{{image.getYear()}}</p>
+            <img src="{{'../assets/pics/bildergalerie/' + location.getLocationUrl() + '/' + image.getLabel() + '.jpg'}}" alt="{{location.getLocationUrl()}}">
         </div>
         <p *ngIf="location.getHiddenImagesAmount() > 0 && location.getImages().length > 0" class="images-button" (click)="location.showMoreImages()">mehr Bilder zeigen</p>
     </div>
     <!-- Deprecated -->
     <div *ngIf="location.hasDeprecatedImages()" class="deprecated-container">
-        <p *ngIf="location.getImages().length > 0 && location.getDeprecatedImages().length === 0" class="deprecated-button" (click)="location.toggleDeprecatedImages()">
-            Bilder anzeigen, wie der Garten vor meiner Umgestaltung aussah
+        <p *ngIf="location.getImages().length > 0" class="deprecated-button" (click)="location.toggleDeprecatedImages()">
+            Bilder {{location.getDeprecatedImages().length === 0 ? 'anzeigen' : 'ausblenden'}}, wie der Garten vor meiner Umgestaltung aussah
         </p>
-        <div *ngFor=" let image of location.getDeprecatedImages()" class="deprecated-image">
-            <img src="{{'../assets/pics/bildergalerie/' + image.getLabel() + '.jpg'}}" alt="{{image.getLabel()}}">
+        <div *ngIf="location.getImages().length > 0">
+            <div *ngFor=" let image of location.getDeprecatedImages()" class="deprecated-image">
+                <img src="{{'../assets/pics/bildergalerie/' + location.getLocationUrl() + '/alt/' + image.getLabel() + '.jpg'}}" alt="{{image.getLabel()}}">
+            </div>
         </div>
     </div>
 </div>
