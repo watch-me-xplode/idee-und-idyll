@@ -4,7 +4,6 @@ export class LocationBildergalerie {
     private location: string;
     private sublocation: string;
     private locationUrl: string;
-    private backgroundimageName: string;
     private images: ImageBildergalerie[] = [];
     private deprecatedImages: ImageBildergalerie[] = [];
     private visibleImagesAmount: number;
@@ -18,14 +17,12 @@ export class LocationBildergalerie {
     public getLocation(): string { return this.location; }
     public getSublocation(): string { return this.sublocation; }
     public getLocationUrl(): string { return this.locationUrl; }
-    public getImageName(): string { return this.backgroundimageName; }
     public getImages(): ImageBildergalerie[] { return this.images.slice(0, this.visibleImagesAmount); }
     public getDeprecatedImages(): ImageBildergalerie[] { return this.deprecatedImages.slice(0, this.visibleDeprecatedImagesAmount); }
 
     public setLocation(location: string): LocationBildergalerie { this.location = location; return this; }
     public setSublocation(sublocation: string): LocationBildergalerie { this.sublocation = sublocation; return this; }
     public setLocationUrl(location: string): LocationBildergalerie { this.locationUrl = location; return this; }
-    public setImageName(name: string): LocationBildergalerie { this.backgroundimageName = name; return this; }
     public setImages(images: ImageBildergalerie[]): LocationBildergalerie {
         images.forEach(image => {
             if (image.isDeprecated()) {
@@ -39,12 +36,12 @@ export class LocationBildergalerie {
     public getHiddenImagesAmount(): number { return this.images.length - this.visibleImagesAmount; }
     public toggleImages(): void {
         if (this.visibleImagesAmount === 0) {
-            this.visibleImagesAmount += 1; 
+            this.visibleImagesAmount += 3; 
         } else {
             this.visibleImagesAmount = 0;
         }
     }
-    public showMoreImages(): void { this.visibleImagesAmount += 1; }
+    public showMoreImages(): void { this.visibleImagesAmount += 3; }
     public toggleDeprecatedImages(): void {
         if (this.visibleDeprecatedImagesAmount === 0) {
             this.visibleDeprecatedImagesAmount = this.deprecatedImages.length; 

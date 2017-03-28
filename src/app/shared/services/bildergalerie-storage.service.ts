@@ -24,7 +24,7 @@ export class BildergalerieStorage {
         landshutImages.push(
             new ImageBildergalerie("1")
         );
-        let landshut: LocationBildergalerie = new LocationBildergalerie().setLocation("Landshut").setSublocation("").setLocationUrl("landshut").setImageName("test2").setImages(landshutImages);
+        let landshut: LocationBildergalerie = new LocationBildergalerie().setLocation("Landshut").setSublocation("").setLocationUrl("landshut").setImages(landshutImages);
         this.locations.push(landshut);
         
 
@@ -38,7 +38,7 @@ export class BildergalerieStorage {
             new ImageBildergalerie("1").setDeprecated(true),
             new ImageBildergalerie("2").setDeprecated(true)
         );
-        let mettenbach1: LocationBildergalerie = new LocationBildergalerie().setLocation("Mettenbach").setSublocation("Garten 1").setLocationUrl("mettenbach_1").setImageName("test2").setImages(mettenbachImages1);
+        let mettenbach1: LocationBildergalerie = new LocationBildergalerie().setLocation("Mettenbach").setSublocation("Garten 1").setLocationUrl("mettenbach_1").setImages(mettenbachImages1);
         this.locations.push(mettenbach1);
         
 
@@ -50,7 +50,7 @@ export class BildergalerieStorage {
             new ImageBildergalerie("3"),
             new ImageBildergalerie("4")
         );
-        let mettenbach2: LocationBildergalerie = new LocationBildergalerie().setLocation("Mettenbach").setSublocation("Garten 2").setLocationUrl("mettenbach_2").setImageName("test2").setImages(mettenbachImages2);
+        let mettenbach2: LocationBildergalerie = new LocationBildergalerie().setLocation("Mettenbach").setSublocation("Garten 2").setLocationUrl("mettenbach_2").setImages(mettenbachImages2);
         this.locations.push(mettenbach2);
         
 
@@ -63,7 +63,7 @@ export class BildergalerieStorage {
             new ImageBildergalerie("4"),
             new ImageBildergalerie("5")
         );
-        let mettenbach3: LocationBildergalerie = new LocationBildergalerie().setLocation("Mettenbach").setSublocation("Garten 3").setLocationUrl("mettenbach_2").setImageName("test2").setImages(mettenbachImages3);
+        let mettenbach3: LocationBildergalerie = new LocationBildergalerie().setLocation("Mettenbach").setSublocation("Garten 3").setLocationUrl("mettenbach_3").setImages(mettenbachImages3);
         this.locations.push(mettenbach3);
         
 
@@ -77,7 +77,7 @@ export class BildergalerieStorage {
             new ImageBildergalerie("5"),
             new ImageBildergalerie("6")
         );
-        let balkon: LocationBildergalerie = new LocationBildergalerie().setLocation("Balkon & Innenraum").setSublocation("").setLocationUrl("balkon_und_innengestaltung").setImageName("test2").setImages(balkonImages);
+        let balkon: LocationBildergalerie = new LocationBildergalerie().setLocation("Balkon & Innenraum").setSublocation("").setLocationUrl("balkon_und_innengestaltung").setImages(balkonImages);
         this.locations.push(balkon);
         
 
@@ -92,7 +92,7 @@ export class BildergalerieStorage {
             new ImageBildergalerie("1").setDeprecated(true),
             new ImageBildergalerie("2").setDeprecated(true)
         );
-        let unterschleissheim: LocationBildergalerie = new LocationBildergalerie().setLocation("Unterschleissheim").setSublocation("").setLocationUrl("unterschleissheim").setImageName("test2").setImages(unterschleissheimImages);
+        let unterschleissheim: LocationBildergalerie = new LocationBildergalerie().setLocation("Unterschleissheim").setSublocation("").setLocationUrl("unterschleissheim").setImages(unterschleissheimImages);
         this.locations.push(unterschleissheim);
 
 
