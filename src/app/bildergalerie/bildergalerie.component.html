@@ -4,7 +4,7 @@
         <img src="{{'../assets/pics/location-background/' + location.getLocationUrl() + '.png'}}" alt="">
         <p class="sublocation">{{location.getSublocation()}}</p>
         <p class="name">{{location.getLocation()}}</p>
-        <p class="infotext">~ zum  {{location.getImages().length === 0 ? 'öffnen' : 'schließen'}} klicken ~</p>
+        <p class="infotext">~ zum {{location.getImages().length === 0 ? 'öffnen' : 'schließen'}} klicken ~</p>
     </div>
     <!-- Images -->
     <div class="images-container">
@@ -21,6 +21,7 @@
         <div *ngIf="location.getImages().length > 0">
             <div *ngFor=" let image of location.getDeprecatedImages()" class="deprecated-image">
                 <img src="{{'../assets/pics/bildergalerie/' + location.getLocationUrl() + '/alt/' + image.getLabel() + '.jpg'}}" alt="{{image.getLabel()}}">
+                <p><b>vorher</b></p>
             </div>
         </div>
     </div>

@@ -1,0 +1,37 @@
+@import "../shared/scss/general/general";
+#wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    @media screen and (min-width: $mobile-max) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    h1 {
+        color: $color-main;
+        font-family: $font-family-handwriting2;
+    }
+    p,
+    a,
+    span {
+        @include font-size-great;
+        color: $color-main;
+        font-family: $font-family-handwriting2;
+    }
+    #telemedien-container {
+        margin-bottom: 3rem;
+        #owner-container,
+        #developer-container {
+            padding-left: 1rem;
+            @media screen and (min-width: $mobile-max) {
+                padding-left: 2rem;
+            }
+            a {
+                display: block;
+                text-align: center;
+            }
+            p {
+                text-align: center;
+            }
+        }
+    }
+}

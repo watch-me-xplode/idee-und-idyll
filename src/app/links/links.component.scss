@@ -1,0 +1,12 @@
+@import "../shared/scss/general/general";
+#wrapper {
+    @include flexbox-container(column, nowrap, space-around);
+    a {
+        @include flexbox-item();
+        @include font-size-greater();
+        color: $color-main;
+        font-family: $font-family-handwriting2;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+}

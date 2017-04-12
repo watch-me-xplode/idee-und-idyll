@@ -47,7 +47,6 @@
             width: 100%;
         }
     }
-
     .images-container {
         .galerie-image {
             img {
@@ -58,7 +57,6 @@
                 width: 90%;
             }
         }
-
         .images-button {
             @include font-size-greater();
             @include radial-gradient(white, rgba(0, 0, 0, 0));
@@ -74,7 +72,6 @@
             width: 100%;
         }
     }
-
     .deprecated-container {
         .deprecated-button {
             @include font-size-normal();
@@ -90,8 +87,8 @@
             text-align: center;
             width: 100%;
         }
-
         .deprecated-image {
+            position: relative;
             img {
                 @include filter(sepia(50%));
                 display: block;
@@ -99,6 +96,18 @@
                 margin-right: auto;
                 margin-top: 3rem;
                 width: 70%;
+            }
+            p {
+                @include drop-shadow(0 0 5px #fff);
+                @include font-size-greatest();
+                color: #000;
+                font-family: $font-family-handwriting2;
+                margin: 0;
+                opacity: 0.7;
+                position: absolute;
+                text-align: center;
+                top: 0.3rem;
+                width: 100%;
             }
         }
     }

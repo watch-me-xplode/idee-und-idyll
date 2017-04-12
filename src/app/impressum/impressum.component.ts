@@ -12,4 +12,16 @@ export class ImpressumComponent implements OnInit {
   ngOnInit() {
   }
 
+  private getMyEmail(): string {
+    const firstPart = 'info';
+    const lastPart = 'idee-und-idyll.de';
+    return firstPart + '@' + lastPart;
+  }
+
+  private getDeveloperEmail(): string {
+    const firstPart = 'niko';
+    const lastPart = 'watch-me-xplode.de';
+    return firstPart + '@' + lastPart;
+  }
+
 }
