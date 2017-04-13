@@ -17,6 +17,7 @@ import { LinksComponent } from './links/links.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
 import { GuestbookComponent } from './guestbook/guestbook.component';
 import { ImpressumComponent } from './impressum/impressum.component';
+import { QuickLinksComponent } from './quick-links/quick-links.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ImpressumComponent } from './impressum/impressum.component';
     LinksComponent,
     KontaktComponent,
     GuestbookComponent,
-    ImpressumComponent
+    ImpressumComponent,
+    QuickLinksComponent
   ],
   imports: [
     BrowserModule,
