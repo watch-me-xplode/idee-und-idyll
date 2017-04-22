@@ -1,7 +1,7 @@
 <!-- Locations -->
 <div class="location-container" *ngFor="let location of locations">
     <div class="location-headline" (click)="location.toggleImages()">
-        <img src="{{'../assets/pics/location-background/' + location.getLocationUrl() + '.png'}}" alt="">
+        <img src="{{'../assets/pics/location-background/' + location.getLocationUrl() + '.jpg'}}" alt="">
         <p class="sublocation">{{location.getSublocation()}}</p>
         <p class="name">{{location.getLocation()}}</p>
         <p class="infotext">~ zum {{location.getImages().length === 0 ? 'öffnen' : 'schließen'}} klicken ~</p>

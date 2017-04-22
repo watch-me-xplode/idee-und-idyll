@@ -11,8 +11,27 @@
             position: relative;
             z-index: 1;
         }
+        #impressum {
+            @include font-size-greater();
+            @include radial-gradient(white, rgba(0, 0, 0, 0));
+            border-radius: 10px;
+            box-sizing: border-box;
+            color: $color-main;
+            cursor: pointer;
+            display: block;
+            font-family: $font-family-handwriting;
+            margin: 2rem;
+            padding: 0.5rem 2rem;
+            text-align: center;
+            width: 50%;
+            @media screen and (min-width: $tablet-min) {
+                width: 33%;
+            }
+            @media screen and (min-width: $desktop-min) {
+                width: auto;
+            }
+        }
     }
-
     .hide-maxwidth-container {
         height: 0;
         overflow: hidden;

@@ -1,5 +1,6 @@
 @import "../shared/scss/general/general";
 #logo-mobile {
+    cursor: pointer;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -12,6 +13,7 @@
 }
 
 #logo-tablet {
+    cursor: pointer;
     display: none;
     margin-left: auto;
     margin-right: auto;
@@ -53,6 +55,7 @@
     }
     #logo-desktop {
         @include flexbox-item();
+        cursor: pointer;
         display: none;
         max-width: 300px;
         @media screen and (min-width: $desktop-min) {
