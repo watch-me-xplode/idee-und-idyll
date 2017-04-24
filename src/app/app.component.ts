@@ -10,8 +10,10 @@ export class AppComponent {
   private landingPage: boolean = false;
 
   constructor() {
-    if (window.location.href.endsWith("idee-und-idyll.de") || window.location.href.endsWith("idee-und-idyll.de/") ||
-      window.location.href.endsWith(":4200") || window.location.href.endsWith(":4200/")) {
+    if (window.location.href.endsWith('idee-und-idyll.de') || window.location.href.endsWith('idee-und-idyll.de/') ||
+      window.location.href.endsWith(':4200') || window.location.href.endsWith(':4200/') ||
+      window.location.href.endsWith('idee-und-idyll.de/#/') ||
+      window.location.href.endsWith(':4200/#/')) {
       this.landingPage = true;
     }
   }

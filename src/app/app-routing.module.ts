@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from "./home/home.component";
-import { PhilosophieComponent } from "./philosophie/philosophie.component";
-import { BildergalerieComponent } from "./bildergalerie/bildergalerie.component";
-import { LinksComponent } from "./links/links.component";
-import { KontaktComponent } from "./kontakt/kontakt.component";
-import { GuestbookComponent } from "./guestbook/guestbook.component";
-import { ImpressumComponent } from "./impressum/impressum.component";
+import { HomeComponent } from './home/home.component';
+import { PhilosophieComponent } from './philosophie/philosophie.component';
+import { BildergalerieComponent } from './bildergalerie/bildergalerie.component';
+import { LinksComponent } from './links/links.component';
+import { KontaktComponent } from './kontakt/kontakt.component';
+import { GuestbookComponent } from './guestbook/guestbook.component';
+import { ImpressumComponent } from './impressum/impressum.component';
 
 const routes: Routes = [
   {
@@ -58,7 +58,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  // imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
   providers: []
 })
