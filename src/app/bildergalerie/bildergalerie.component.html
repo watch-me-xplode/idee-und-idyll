@@ -11,7 +11,9 @@
         <div *ngFor=" let image of location.getImages()" class="galerie-image">
             <img src="{{'../assets/pics/bildergalerie/' + location.getLocationUrl() + '/' + image.getLabel() + '.jpg'}}" alt="{{location.getLocationUrl()}}">
         </div>
-        <p *ngIf="location.getHiddenImagesAmount() > 0 && location.getImages().length > 0" class="images-button" (click)="location.showMoreImages()">mehr Bilder zeigen</p>
+        <p *ngIf="location.getHiddenImagesAmount() > 0 && location.getImages().length > 0" class="images-button" (click)="location.showMoreImages()">
+            mehr Bilder aus {{location.getLocation()}} zeigen
+        </p>
     </div>
     <!-- Deprecated -->
     <div *ngIf="location.hasDeprecatedImages()" class="deprecated-container">
