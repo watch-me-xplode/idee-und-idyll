@@ -1,6 +1,7 @@
 @import "../shared/scss/general/general";
 #wrapper {
     .content-container {
+        margin-bottom: 4rem;
         margin-left: auto;
         margin-right: auto;
         width: 90%;
@@ -8,13 +9,13 @@
             @include font-size-great;
             color: $color-main;
             font-family: $font-family-handwriting2;
-            text-align: center; 
+            text-align: center;
         }
         .info {
             @include font-size-normal;
             color: $color-main;
             font-family: $font-family-handwriting2;
-            text-align: center; 
+            text-align: center;
         }
     }
 }
