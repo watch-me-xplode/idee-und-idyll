@@ -198,6 +198,16 @@ export class BildergalerieStorage {
         const wörth_an_der_isar: LocationBildergalerie = new LocationBildergalerie()
             .setLocation('Wörth an der Isar').setLocationUrl('wörth_an_der_isar').setImages(wörth_an_der_isarImages);
         this.locations.push(wörth_an_der_isar);
+
+
+        // Grabgestaltung
+        const grabgestaltungImages: ImageBildergalerie[] = [];
+        grabgestaltungImages.push(
+            new ImageBildergalerie('1')
+        );
+        const grabgestaltung: LocationBildergalerie = new LocationBildergalerie()
+            .setLocation('Grabgestaltung').setLocationUrl('grabgestaltung').setImages(grabgestaltungImages);
+        this.locations.push(grabgestaltung);
     }
 
     public getLocations(): LocationBildergalerie[] {
