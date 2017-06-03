@@ -19,8 +19,8 @@ export class ImpressumComponent implements OnInit {
   }
 
   private getDeveloperEmail(): string {
-    const firstPart = 'niko';
-    const lastPart = 'watch-me-xplode.de';
+    const firstPart = 'webdesign';
+    const lastPart = 'nikolai-wohlgemuth.de';
     return firstPart + '@' + lastPart;
   }
 
