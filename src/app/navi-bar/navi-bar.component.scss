@@ -35,7 +35,7 @@
     z-index: 1;
     a {
         @include font-size-greater();
-        @include radial-gradient(white, rgba(0, 0, 0, 0));
+        @include radial-gradient(white, rgba(255, 255, 255, 0));
         @include flexbox-item();
         border-radius: 10px;
         box-sizing: border-box;
@@ -68,6 +68,7 @@
     opacity: 0.3;
     #branches-desktop {
         left: 0;
+        max-width: 100%;
         position: absolute;
         top: 0;
         width: 400px;

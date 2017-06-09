@@ -14,7 +14,7 @@
         #impressum {
             @include font-size-greater();
             @include radial-gradient(white,
-            rgba(0, 0, 0, 0));
+            rgba(255, 255, 255, 0));
             border-radius: 10px;
             box-sizing: border-box;
             color: $color-main;
