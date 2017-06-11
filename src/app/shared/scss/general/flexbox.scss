@@ -1,5 +1,5 @@
-@mixin flexbox-container($direction: row, $wrap: nowrap, $justifyContent: space-between, $alignItems: center, $flex: flex, $alignContent: center) {
-    display: $flex; // flex | inline-flex
+@mixin flexbox-container($direction: row, $wrap: nowrap, $justifyContent: space-between, $alignItems: center, $display: flex, $alignContent: center) {
+    display: $display; // flex | inline-flex
     flex-direction: $direction; // row | row-reverse | column | column-reverse
     flex-wrap: $wrap; // nowrap | wrap | wrap-reverse
     justify-content: $justifyContent; // flex-start | flex-end | center | space-between | space-around

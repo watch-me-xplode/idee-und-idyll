@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  private landingPage: boolean = false;
+  private landingPage = false;
 
   constructor() {
     if (window.location.href.endsWith('idee-und-idyll.de') || window.location.href.endsWith('idee-und-idyll.de/') ||

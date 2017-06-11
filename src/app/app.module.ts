@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BildergalerieStorage } from './shared/services/bildergalerie-storage.service';
 import { GbStorage } from './shared/services/gb-storage.service';
 import { SwiperService } from './swiper/swiper.service';
+import { SwiperVerticalService } from './swiper-vertical/swiper-vertical.service';
 
 import { AppComponent } from './app.component';
 import { NaviBarComponent } from './navi-bar/navi-bar.component';
@@ -20,6 +21,7 @@ import { GuestbookComponent } from './guestbook/guestbook.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { QuickLinksComponent } from './quick-links/quick-links.component';
 import { SwiperComponent } from './swiper/swiper.component';
+import { SwiperVerticalComponent } from './swiper-vertical/swiper-vertical.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { SwiperComponent } from './swiper/swiper.component';
     GuestbookComponent,
     ImpressumComponent,
     QuickLinksComponent,
-    SwiperComponent
+    SwiperComponent,
+    SwiperVerticalComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,8 @@ import { SwiperComponent } from './swiper/swiper.component';
   providers: [
     BildergalerieStorage,
     GbStorage,
-    SwiperService
+    SwiperService,
+    SwiperVerticalService
   ],
   bootstrap: [AppComponent]
 })
