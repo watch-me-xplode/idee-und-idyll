@@ -8,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class SwiperVerticalComponent implements OnInit {
 
   private indexCounter = 0;
+  private counterStarted = false;
   private readonly slideCount = 22;
   private readonly visibleSlides = 7;
 
@@ -16,10 +17,13 @@ export class SwiperVerticalComponent implements OnInit {
   ngOnInit() {
     // set swiper height after all necessary elements are added to the DOM
     //this.resizeSwiperHeight();
-    setInterval(() => {
-      this.indexCounter++;
-      this.indexCounter = this.indexCounter % this.slideCount;
-    }, 2000);
+    setTimeout(() => {
+      this.counterStarted = true;
+      setInterval(() => {
+        this.indexCounter++;
+        this.indexCounter = this.indexCounter % this.slideCount;
+      }, 2000);
+    }, 500);
   }
 
   /**

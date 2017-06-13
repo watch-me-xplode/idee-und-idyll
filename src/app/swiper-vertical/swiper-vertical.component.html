@@ -1,4 +1,35 @@
 <div id="swiper-vertical-slide-wrapper">
+    <!-- initial slides -->
+    <div class="swiper-vertical-slide" [ngClass]="counterStarted ? 'init-up' : 'init-down'">
+        <p>Gartenberatung und Planung</p>
+        <img src="../../assets/pics/iconBlume16.png" alt="filling">
+    </div>
+    <div class="swiper-vertical-slide" [ngClass]="counterStarted ? 'init-up' : 'init-down'">
+        <p>Skizzierung und Zeichnung</p>
+        <img src="../../assets/pics/iconBlume16.png" alt="filling">
+    </div>
+    <div class="swiper-vertical-slide" [ngClass]="counterStarted ? 'init-up' : 'init-down'">
+        <p>Gestaltung, Dekoration</p>
+        <img src="../../assets/pics/iconBlume16.png" alt="filling">
+    </div>
+    <div class="swiper-vertical-slide" [ngClass]="counterStarted ? 'init-up' : 'init-down'">
+        <p>Garten, Wintergarten</p>
+        <img src="../../assets/pics/iconBlume16.png" alt="filling">
+    </div>
+    <div class="swiper-vertical-slide" [ngClass]="counterStarted ? 'init-up' : 'init-down'">
+        <p>Farbberatung</p>
+        <img src="../../assets/pics/iconBlume16.png" alt="filling">
+    </div>
+    <div class="swiper-vertical-slide" [ngClass]="counterStarted ? 'init-up' : 'init-down'">
+        <p>Stilfragen auch im Innenbereich</p>
+        <img src="../../assets/pics/iconBlume16.png" alt="filling">
+    </div>
+    <div class="swiper-vertical-slide" [ngClass]="counterStarted ? 'init-up' : 'init-down'">
+        <p>Hilfe zur Selbsthilfe</p>
+        <img src="../../assets/pics/iconBlume16.png" alt="filling">
+    </div>
+
+    <!-- animated slides -->
     <div class="swiper-vertical-slide" [ngClass]="isSlideVisible(0) ? 'up' : 'down'">
         <p>Gartenberatung und Planung</p>
         <img src="../../assets/pics/iconBlume16.png" alt="filling">
