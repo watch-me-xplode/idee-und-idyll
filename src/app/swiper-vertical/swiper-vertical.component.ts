@@ -1,7 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
-import { SwiperVerticalService } from './swiper-vertical.service';
-
 @Component({
   selector: 'app-swiper-vertical',
   templateUrl: './swiper-vertical.component.html',
@@ -10,15 +8,14 @@ import { SwiperVerticalService } from './swiper-vertical.service';
 export class SwiperVerticalComponent implements OnInit {
 
   private indexCounter = 0;
-  private readonly slideCount = 11;
+  private readonly slideCount = 22;
+  private readonly visibleSlides = 7;
 
-  constructor(private service: SwiperVerticalService) { }
+  constructor() { }
 
   ngOnInit() {
     // set swiper height after all necessary elements are added to the DOM
     //this.resizeSwiperHeight();
-    // init SwiperService
-    //this.service.init();
     setInterval(() => {
       this.indexCounter++;
       this.indexCounter = this.indexCounter % this.slideCount;
@@ -43,14 +40,11 @@ export class SwiperVerticalComponent implements OnInit {
     }
   }
 
-  private getSwiperClass(index: number): string {
-    const easycount = this.slideCount + this.indexCounter;
-    const easyindex = this.slideCount + index;
-    if (easyindex === easycount) {
-      return 'invisible';
-    } else if (easyindex < easycount && easyindex > easycount - 5) {
-      return 'visible';
+  private isSlideVisible(index: number): boolean {
+    let indexPosition = index - this.indexCounter;
+    if (indexPosition < 0) {
+      indexPosition += this.slideCount;
     }
-    return 'down';
+    return indexPosition < this.visibleSlides;
   }
 }

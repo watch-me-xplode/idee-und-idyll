@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { BildergalerieStorage } from './shared/services/bildergalerie-storage.service';
 import { GbStorage } from './shared/services/gb-storage.service';
 import { SwiperService } from './swiper/swiper.service';
-import { SwiperVerticalService } from './swiper-vertical/swiper-vertical.service';
 
 import { AppComponent } from './app.component';
 import { NaviBarComponent } from './navi-bar/navi-bar.component';
@@ -48,8 +47,7 @@ import { SwiperVerticalComponent } from './swiper-vertical/swiper-vertical.compo
   providers: [
     BildergalerieStorage,
     GbStorage,
-    SwiperService,
-    SwiperVerticalService
+    SwiperService
   ],
   bootstrap: [AppComponent]
 })

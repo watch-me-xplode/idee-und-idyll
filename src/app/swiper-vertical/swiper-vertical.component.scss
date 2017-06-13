@@ -1,41 +1,39 @@
 @import "../shared/scss/general/general";
-$heightSwiperSlide: 100px;
+$heightSwiperSlide: 130px;
 $heightSwiperWrapper: 500px;
+$slideDuration: 15s;
 #swiper-vertical-slide-wrapper {
     border-radius: 20px;
     height: $heightSwiperWrapper;
     overflow: hidden;
     position: relative;
-    width: 100%;
+    width: 500px;
     .swiper-vertical-slide {
         @include flexbox-container(column, nowrap, center, center, flex, space-around);
         height: $heightSwiperSlide;
         position: absolute;
-        transform: translate(0, 0);
-        transition: transform 5s linear;
+        transition: transform $slideDuration linear;
         width: 100%;
         p {
-            font-size: 1.1rem;
+            @include font-size-greater();
+            color: $color-main;
+            font-family: $font-family-handwriting2;
             margin-left: auto;
             margin-right: auto;
             max-width: 90%;
             text-align: center;
         }
         img {
-            display: block;
+            display: none;
             width: 20px;
         }
     }
     .down {
         opacity: 0;
-        transform: translate(0, calc(#{$heightSwiperSlide} + #{$heightSwiperWrapper})) !important;
+        transform: translate(0, $heightSwiperWrapper) !important;
     }
-    .visible {
+    .up {
         opacity: 1;
         transform: translate(0, -$heightSwiperSlide) !important;
-    }
-    .invisible {
-        opacity: 0;
-        transform: translate(0, calc(#{$heightSwiperSlide} + #{$heightSwiperWrapper})) !important;
     }
 }
