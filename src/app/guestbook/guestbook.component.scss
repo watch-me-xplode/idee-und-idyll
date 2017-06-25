@@ -8,13 +8,6 @@
         @media screen and (min-width: $desktop-min) {
             margin-bottom: 3rem;
         }
-        &:hover {
-            a {
-                span, i {
-                    color: $color-secondary;
-                }
-            }
-        }
         a {
             @include radial-gradient(white, rgba(255, 255, 255, 0));
             @include font-size-normal;
@@ -34,6 +27,11 @@
             }
             @media screen and (min-width: $desktop-min) {
                 width: 600px;
+            }
+            &:hover {
+                span, i {
+                    color: $color-secondary;
+                }
             }
             span, i {
                 transition: color 0.2s;

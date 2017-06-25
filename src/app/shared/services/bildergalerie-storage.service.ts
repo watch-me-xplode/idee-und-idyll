@@ -41,6 +41,23 @@ export class BildergalerieStorage {
         this.locations.push(berglern);
 
 
+        // Falkensee
+        const falkenseeImages: ImageBildergalerie[] = [];
+        falkenseeImages.push(
+            new ImageBildergalerie('1'),
+            new ImageBildergalerie('2'),
+            new ImageBildergalerie('3'),
+            new ImageBildergalerie('4'),
+            new ImageBildergalerie('5'),
+            new ImageBildergalerie('1').setDeprecated(true),
+            new ImageBildergalerie('2').setDeprecated(true),
+            new ImageBildergalerie('3').setDeprecated(true)
+        );
+        const falkensee: LocationBildergalerie = new LocationBildergalerie()
+            .setLocation('Falkensee').setLocationUrl('falkensee').setImages(falkenseeImages);
+        this.locations.push(falkensee);
+
+
         // Impressionen
         const impressionenImages: ImageBildergalerie[] = [];
         impressionenImages.push(
@@ -108,6 +125,9 @@ export class BildergalerieStorage {
             new ImageBildergalerie('1'),
             new ImageBildergalerie('2'),
             new ImageBildergalerie('3'),
+            new ImageBildergalerie('4'),
+            new ImageBildergalerie('5'),
+            new ImageBildergalerie('6'),
 
             new ImageBildergalerie('1').setDeprecated(true),
             new ImageBildergalerie('2').setDeprecated(true)
