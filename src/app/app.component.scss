@@ -24,12 +24,16 @@
             margin: 2rem 0 0;
             padding: 0.5rem 1rem;
             text-align: center;
+            transition: color 0.2s;
             width: 50%;
             @media screen and (min-width: $tablet-min) {
                 width: 33%;
             }
             @media screen and (min-width: $desktop-min) {
                 width: 10%;
+            }
+            &:hover {
+                color: $color-secondary;
             }
         }
     }

@@ -23,6 +23,7 @@ img {
         font-family: $font-family-handwriting;
         margin: 0;
         text-align: center;
+        transition: color 0.2s;
         width: 100%;
         @media screen and (min-width: $tablet-min) {
             width: auto;
