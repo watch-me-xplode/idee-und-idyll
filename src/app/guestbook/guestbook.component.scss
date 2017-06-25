@@ -1,5 +1,42 @@
 @import "../shared/scss/general/general";
 #wrapper {
+    #add-entry-container {
+        margin-bottom: 2rem;
+        @media screen and (min-width: $tablet-min) {
+            margin-bottom: 3rem;
+        }
+        @media screen and (min-width: $desktop-min) {
+            margin-bottom: 3rem;
+        }
+        &:hover {
+            a {
+                span, i {
+                    color: $color-secondary;
+                }
+            }
+        }
+        a {
+            @include radial-gradient(white, rgba(255, 255, 255, 0));
+            @include font-size-normal;
+            border-radius: 20px;
+            box-sizing: border-box;
+            color: $color-main;
+            cursor: pointer;
+            display: block;
+            font-family: $font-family-handwriting2;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 1rem 1rem 2rem 1rem;
+            text-align: center;
+            width: 95%;
+            @media screen and (min-width: $tablet-min) {
+                width: 70%;
+            }
+            @media screen and (min-width: $desktop-min) {
+                width: 600px;
+            }
+        }
+    }
     .content-container {
         margin-bottom: 4rem;
         margin-left: auto;

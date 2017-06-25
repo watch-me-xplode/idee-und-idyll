@@ -19,4 +19,10 @@ export class GuestbookComponent implements OnInit {
     this.entries = this.storage.getEntries();
   }
 
+  private getMyEmail(): string {
+    let firstPart: string = "info";
+    let domain: string = "idee-und-idyll.de";
+    return firstPart + "@" + domain;
+  }
+
 }

@@ -1,4 +1,14 @@
 <div id="wrapper">
+  <div id="add-entry-container">
+    <a href="mailto:{{getMyEmail()}}">
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        <br>
+        Um einen Eintrag zu meinem Gästebuch hizuzufügen,
+        <br>
+        schreiben Sie mir bitte eine E-Mail an <span>info@idee-und-idyll.de</span>.
+        <br>
+    </a>
+  </div>
   <div class="content-container" *ngFor="let entry of entries">
     <p class="content">{{entry.getContent()}}</p>
     <p class="info"><b>{{entry.getAuthor() + ', ' + entry.getLocation()}}</b></p>
