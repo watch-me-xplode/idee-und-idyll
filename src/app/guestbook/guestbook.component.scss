@@ -35,6 +35,9 @@
             @media screen and (min-width: $desktop-min) {
                 width: 600px;
             }
+            span, i {
+                transition: color 0.2s;
+            }
         }
     }
     .content-container {
