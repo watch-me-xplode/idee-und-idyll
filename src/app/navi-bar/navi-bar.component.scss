@@ -52,6 +52,9 @@
         @media screen and (min-width: $desktop-min) {
             width: auto;
         }
+        &:hover {
+            color: $color-secondary;
+        }
     }
     #logo-desktop {
         @include flexbox-item();
