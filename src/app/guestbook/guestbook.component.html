@@ -10,7 +10,12 @@
     </a>
   </div>
   <div class="content-container" *ngFor="let entry of entries">
-    <p class="content">{{entry.getContent()}}</p>
+    <p class="content">
+      <span *ngFor="let paragraph of entry.getContent()">
+        {{paragraph}}
+        <br>
+      </span>
+    </p>
     <p class="info"><b>{{entry.getAuthor() + ', ' + entry.getLocation()}}</b></p>
   </div>
 </div>

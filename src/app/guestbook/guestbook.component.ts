@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { GbStorage } from "../shared/services/gb-storage.service";
+import { GbStorage } from '../shared/services/gb-storage.service';
 
-import { GbEntry } from "../shared/models/gb-entry.model";
+import { GbEntry } from '../shared/models/gb-entry.model';
 
 @Component({
   selector: 'app-guestbook',
@@ -20,9 +20,9 @@ export class GuestbookComponent implements OnInit {
   }
 
   private getMyEmail(): string {
-    let firstPart: string = "info";
-    let domain: string = "idee-und-idyll.de";
-    return firstPart + "@" + domain;
+    const firstPart = 'info';
+    const domain = 'idee-und-idyll.de';
+    return firstPart + '@' + domain;
   }
 
 }
